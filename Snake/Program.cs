@@ -10,7 +10,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(80, 25);
+            Console.SetWindowSize(80, 25);
                                    
             HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
             HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
@@ -20,9 +20,8 @@ namespace Snake
             downLine.Drow();
             leftLine.Drow();
             rightLine.Drow();
-            
-            Console.ReadLine();
 
+            Console.ReadLine();            
         }
     }
 }
