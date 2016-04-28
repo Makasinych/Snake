@@ -32,7 +32,7 @@ namespace Snake
             {
                 x = x + offset;
             }
-            else if (direction == Direction.RIGHT)
+            else if (direction == Direction.LEFT)
             {
                 x = x - offset;
             }
@@ -40,13 +40,22 @@ namespace Snake
             {
                 y = y + offset;
             }
-            else y = y - offset;
+            else if (direction == Direction.DOWN)
+            {
+                y = y - offset;
+            }        
         }
 
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
 
         public override string ToString()
